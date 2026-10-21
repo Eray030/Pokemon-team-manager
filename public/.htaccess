@@ -1,0 +1,6 @@
+# Stuur alle routes (bv. /list of /detail/1) naar index.html zodat React Router ze afhandelt
+RewriteEngine On
+RewriteBase /pokemon-team-manager/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.html [L]
