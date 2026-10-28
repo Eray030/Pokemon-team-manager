@@ -16,19 +16,22 @@ a {
 
 .app {
   min-height: 100vh;
-  background: white;
+  background: #f4f5f7;
 }
 
 .header {
-  padding: 20px;
-  background: #2f2f2f;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, #2d2d2d 0%, #222 100%);
   color: white;
   text-align: center;
+  border-bottom: 2px solid #181818;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
 }
 
 .content {
@@ -53,11 +56,12 @@ a {
 
 .button {
   display: inline-block;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 12px 26px;
+  border-radius: 10px;
   background: #e3350d;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
 }
 
 .home-page {
@@ -135,7 +139,7 @@ a {
   left: 0;
   right: 0;
   display: flex;
-  background: white;
+  background: #f5f5f5;
   border-top: 2px solid #1f2430;
 }
 
@@ -147,45 +151,7 @@ a {
   padding: 10px 0;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #9ca3af;
-  border-right: 2px solid #1f2430;
-}
-
-.navigation a:last-child {
-  border-right: none;
-}
-
-.navigation svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-.navigation a.active {
-  color: #e3350d;
-}
-
-.navigation {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  background: white;
-  border-top: 2px solid #1f2430;
-}
-
-.navigation a {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 0;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #9ca3af;
+  color: #555;
   border-right: 2px solid #1f2430;
 }
 
