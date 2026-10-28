@@ -8,10 +8,7 @@ function List() {
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
       .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        setPokemons(data.results)
-      })
+      .then(data => setPokemons(data.results))
       .catch(error => console.error('Error:', error))
   }, [])
 
