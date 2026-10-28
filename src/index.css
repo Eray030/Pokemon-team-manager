@@ -61,22 +61,26 @@ a {
   background: #e3350d;
   color: white;
   font-weight: 700;
-  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  border: 2px solid #1f2430;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
 }
 
 .home-page {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-items: center;
 }
 
 .trainer-card {
   background: #fff7f4;
-  border-color: #f4b4a6;
+  border: 2px solid #1f2430;
+  border-radius: 12px;
 }
 
 .trainer-image {
   background: #fff;
+  border-color: #1f2430;
 }
 
 .home-text {
