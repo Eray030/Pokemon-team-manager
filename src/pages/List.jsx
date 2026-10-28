@@ -5,7 +5,6 @@ import PokemonCard from '../components/PokemonCard.jsx'
 function List() {
   const [pokemons, setPokemons] = useState([])
 
-  // data ophalen van de PokéAPI als de pagina laadt
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
       .then(res => res.json())

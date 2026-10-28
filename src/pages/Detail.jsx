@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 function Detail() {
-  // id uit de url halen, bv. /detail/25 geeft id = 25
   const { id } = useParams()
   const [pokemon, setPokemon] = useState(null)
 
@@ -13,7 +12,6 @@ function Detail() {
       .catch(error => console.error('Error:', error))
   }, [id])
 
-  // zolang de data er nog niet is
   if (!pokemon) {
     return <p>Pokémon detail komt hier...</p>
   }

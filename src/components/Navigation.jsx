@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom'
 
-// menu onderaan, NavLink krijgt de class "active" op de pagina waar je bent
 function Navigation() {
   return (
     <nav className="navigation">

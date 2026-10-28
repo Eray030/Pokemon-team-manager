@@ -1,4 +1,3 @@
-// Herbruikbare kaart: krijgt de gegevens binnen via props
 function PokemonCard({ name, image, id }) {
   return (
     <div className="card">
