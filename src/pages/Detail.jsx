@@ -4,16 +4,27 @@ import { useParams } from 'react-router-dom'
 function Detail() {
   const { id } = useParams()
   const [pokemon, setPokemon] = useState(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Pokémon niet gevonden')
+        }
+
+        return res.json()
+      })
       .then(data => setPokemon(data))
-      .catch(error => console.error('Error:', error))
+      .catch(err => setError(err.message))
   }, [id])
 
+  if (error) {
+    return <p className="text">{error}</p>
+  }
+
   if (!pokemon) {
-    return <p>Pokémon detail komt hier...</p>
+    return <p className="text">Pokémon detail komt hier...</p>
   }
 
   return (
