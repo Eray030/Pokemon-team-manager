@@ -22,21 +22,23 @@ function List() {
   }, [])
 
   return (
-    <div>
-      <h2 className="title">Mijn team</h2>
+    <div className="dashboard-panel list-panel">
+      <div className="dashboard-header">Team</div>
 
       {loading && <p className="text">Pokémon worden geladen...</p>}
       {error && <p className="text">{error}</p>}
 
       {!loading && !error && (
-        <div className="list">
+        <div className="team-grid">
           {pokemons.map((p, index) => {
             const id = index + 1
             const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
 
             return (
-              <Link key={p.name} to={`/detail/${id}`}>
-                <PokemonCard name={p.name} image={image} id={id} />
+              <Link key={p.name} to={`/detail/${id}`} className="team-slot team-link">
+                <img src={image} alt={p.name} />
+                <span>{p.name}</span>
+                <small>Lvl {id * 2 + 5}</small>
               </Link>
             )
           })}
